@@ -50,5 +50,6 @@ A few lines above the change to Edit #3 (*was line 107610 for me*), at the line
 On my system at least, the Nvidia GPU wasn't fully sleeping. So even if I wasn't using it, it was pulling a ton of power (around 55-60 W for me). The work around I found was using `envycontrol` and `powerprofilesctl` to setup aliases for power states. Switching my gpu off and setting to power-saver when I didn't need the Nividia gpu, I could drop my energy consumption to about 21-24 W. Not a required fix but worth mentioning for anyone trying to make Linux a daily driver.
 
 
-**Good luck. If you have any comments, fixes, or similar, please make an issue or discussion on the repository. More eyes and voices in this issue will help the community.**
+
+**Good luck. If you have any comments, fixes, or similar, please make an issue or discussion on the repository. More eyes and voices on this issue will help the community.**
 
