@@ -36,12 +36,13 @@ At the location of Edit #3 for F.27, you need to make these changes
 ```
 
 ## Edit #2
-At the location of Edit #4 from F.27, make these changes
-`Store (0x02, \TPDS)` needs to be changed to `Store (One, \TPDS)`
+At the location of Edit #4 from F.27, `Store (0x02, \TPDS)` needs to be changed to `Store (One, \TPDS)`
 
 
 ## Additional edits
-These seem to conclude the important changes. A few lines above the change to Edit #3 (_was line 107610 for me_), at the line
+These seem to conclude the necessary changes. 
+
+A few lines above the change to Edit #3 (*was line 107610 for me*), at the line
 `GpioInt (Level, ActiveLow, ExclusiveAndWake, PullDefault, 0x0000,`, I had changed `Level` to be `Edge`, but it seems the compiler switched it back. So for completeness try this if the other changes are still not working.
 
 
@@ -49,5 +50,5 @@ These seem to conclude the important changes. A few lines above the change to Ed
 On my system at least, the Nvidia GPU wasn't fully sleeping. So even if I wasn't using it, it was pulling a ton of power (around 55-60 W for me). The work around I found was using `envycontrol` and `powerprofilesctl` to setup aliases for power states. Switching my gpu off and setting to power-saver when I didn't need the Nividia gpu, I could drop my energy consumption to about 21-24 W. Not a required fix but worth mentioning for anyone trying to make Linux a daily driver.
 
 
-*Good luck. If you have any comments, fixes, or similar, please make an issue or discussion on the repository. More eyes and voices in this issue will help the community.*
+**Good luck. If you have any comments, fixes, or similar, please make an issue or discussion on the repository. More eyes and voices in this issue will help the community.**
 
